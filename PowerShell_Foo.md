@@ -34,6 +34,7 @@ $found = $cmdlet.Parameters.Values | Select-Object Name,Aliases,Switchparameter 
 ```
 
 ### Start WinRM Service
+
 ```Start-Service winrm```  
 
 ```Enable-PSRemoting -Force```  
@@ -42,10 +43,9 @@ $found = $cmdlet.Parameters.Values | Select-Object Name,Aliases,Switchparameter 
 
 ```Get-Service WinRM```  
 
-
 Configures the machine to accept WS-Management requests from others
-```winrm quickconfig```
 
+```winrm quickconfig```
 
 ### Manage Trusted Hosts
 Shows Trusted Hosts list
@@ -63,6 +63,7 @@ To clear the trustedhosts value:
 ```Clear-Item WSMan:\localhost\Client\TrustedHosts``` 
 
 To remove a value:
+
 ```$newvalue = ((Get-ChildItem WSMan:\localhost\Client\TrustedHosts).Value).Replace("computer01,","")```  
 
 ```Set-Item WSMan:\localhost\Client\TrustedHosts $newvalue```
@@ -73,6 +74,7 @@ Creates and establishes a persistent connection to the remote computer(s)
 ```$PSSessions = New-PSSession -ComputerName Computer1, Computer2, Computer3```
 
 View available PSSessions:
+
 ```Get-PSSession```
 
 Use PSSessions with the Invoke-Command
@@ -137,7 +139,7 @@ You can also use a reference file with the parameter `-match` in lieu of `-patte
 
 ### Credit Card Numbers
 
-> Select-String -Pattern '^(\d{4})\s?(\d{4})\s?(\d{4})\s?(\d{4})'
+```Select-String -Pattern '^(\d{4})\s?(\d{4})\s?(\d{4})\s?(\d{4})'```
 
 ### Email Addresses
 
