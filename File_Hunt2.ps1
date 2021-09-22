@@ -29,15 +29,41 @@ $fileExt = ".txt"
 
 $break
 
+
 $file_count = 0
-gci -Path $startDir -Recurse -Force -ErrorAction SilentlyContinue -Include *$fileExt | ForEach-Object { $file_count++ }
+Get-ChildItem -Path $startDir -Recurse -Force -ErrorAction SilentlyContinue | Where-Object {$_.Extension -eq $fileExt} | ForEach-Object { $file_count++; Write-Host $_.FullName } 
 $filenames = gci -Path $startDir -Recurse -Force -ErrorAction SilentlyContinue -Include *$fileExt
-$files = @($filenames | foreach {$_.Name} | Format-Table name)
-Write-Host "Total $fileExt is: $file_count" -ForegroundColor Green
-Write-Host $break -ForegroundColor Green
+
 
 # c. return relevant information per file found
+$fileInfo = Get-ItemProperty $filenames
+$fileInfo
+Write-Host "Total $fileExt files found: $file_count" -ForegroundColor Green
+Write-Host $break -ForegroundColor Green
 
+
+# 4. Get-FileHash
+$fileHash = Get-FileHash -Algorithm MD5 $filenames
+$fileHash
+
+
+# 5. Write relevant data to a file designated by the user
+#$storeInfo = Read-Host "Where would you like to store date? (eg C:\Users\student\Desktop)"
+$storeInfo = 'C:\Users\student\Desktop'
+#$storeName = Read-Host "Name of output file (eg test.txt)"
+$storeName = 'test.txt'
+New-Item -Path $storeInfo -Name $storeName -Force
+$filePath = $storeInfo + "\" + $storeName
+
+Add-Content $filePath "Total $fileExt files found: $file_count"
+Add-Content $filePath $filenames
+Add-Content $filePath $fileHash
+Add-Content $filePath $fileInfo
+
+Set-Location C:\Users\student\Desktop
+& $filePath
+
+<#
 $break
 
 $stream_count = 0
@@ -63,3 +89,4 @@ gci -Path $startDir -Recurse -Force -ErrorAction SilentlyContinue | ForEach-Obje
     }
 Write-Host "Total files count is: $stream_count" -ForegroundColor Green
 Write-Host $break -ForegroundColor Green
+#>
