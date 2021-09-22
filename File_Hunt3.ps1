@@ -17,8 +17,8 @@ while ($C -eq $true){
 
     ForEach ($directory in $location){
         foreach ($file in $Extension){
-            $Hash = (Get-Childitem -Path $directory\*file|get-filehash)
-            $Data = (Get-Childitem -path $directory\*file|Select-object Name, Fullname,Directory,Length,lastwritetime,lastaccesstime)
+            $Hash = (Get-Childitem -Path $directory\*$file|get-filehash)
+            $Data = (Get-Childitem -path $directory\*$file|Select-object Name, Fullname,Directory,Length,lastwritetime,lastaccesstime)
             $Hash | Out-File $output -Append
             $Data | Out-File $output -Append}}
 
