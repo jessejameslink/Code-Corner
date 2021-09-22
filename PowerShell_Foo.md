@@ -1,7 +1,7 @@
 
 ## Set Execution Policy 
 
-## View 
+## View Trusted Host List
 
 ```Set-Item WSMan:\localhost\Client\TrustedHosts```
 
