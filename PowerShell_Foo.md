@@ -1,11 +1,27 @@
 
 ## Set Execution Policy 
-> Set-Item WSMan:\localhost\Client\TrustedHosts
 
+## View 
+> Set-Item WSMan:\localhost\Client\TrustedHosts
+> Get-Item WSMan:\localhost\Client\TrustedHosts
+
+
+# WinRM
 ## Start WinRM Service
 > Start-Service winrm
+## Manage Trusted Hosts
+Shows Trusted Hosts list
 > Get-Item WSMan:\localhost\Client\TrustedHosts
+
+Add Trusted Host
 > Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+
+To clear the trustedhosts value:
+> Clear-Item WSMan:\localhost\Client\TrustedHosts
+
+To remove a value:
+> $newvalue = ((Get-ChildItem WSMan:\localhost\Client\TrustedHosts).Value).Replace("computer01,","")
+> Set-Item WSMan:\localhost\Client\TrustedHosts $newvalue
 
 
 ## Select-String Common Regex
