@@ -3,7 +3,7 @@ while ($c -eq $true){
 $list = @()
 do
 {
-    $Directory = (Read-host 'Enter Directory path (eg C:\Windows\System32\')
+    $Directory = (Read-host 'Enter Directory path (eg C:\Windows\System32\)')
         if ($Directory -ne '') {$list += $Directory}}
 until ($Directory -eq '')
 $lists = @()
