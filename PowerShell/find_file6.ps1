@@ -1,17 +1,39 @@
+############################### HELP SECTION ###############################
+​
 <#
-Accepts two cmd line inputs
-Directory (mandatory)
-Extension (default: dll)
-Check for valid signature
-If valid, log to valid_sigs.log, & don't print to stdout
-File hash, creation date, signing org, & location
-If invalid, log to invalid_sigs.log, & print to stdout
-File hash, creation date, last accessed, & location
+    .SYNOPSIS
+    Validate signatures in signed executables, dynamic link libraries, drivers, and other files supporting signatures.
+​
+    .DESCRIPTION
+    Adds a file name extension to a supplied name.
+    Takes any strings for the file name or extension.
+​
+    .PARAMETER Directory
+    Specifies the directory in which to search for signed files.
+​
+    .PARAMETER Extension
+    Specifies the file extensions for which to search. The default is dll.
+​
+    .PARAMETER OutFile
+    Specifies the output directory for valid_sigs.html and invalid_sigs.html. The default is "%USERPROFILE%\Desktop\"
+​
+    .EXAMPLE
+    PS> .\Get-Sig.ps1 -Directory "C:\Windows\system32", "C:\" -Extension dll, exe -OutFile "C:\Users\Administrator\Documents"
+    Outputs invalid signatures of .exe and .dll files in C:\Windows\system32 and C:\. 
+    Also saves a list of valid signatures to C:\Users\Administrator\Documents\valid_sigs.html
+    And saves a list of invalid signatures to C:\Users\Administrator\Documents\invalid_sigs.html
+​
+    .LINK
+    Get-AuthenticodeSignature 
+​
+    .LINK
+    Get-FileHash
 #>
 
+
+cd $env:COMPUTERNAME
 cls
 
-   
 
 Function FileFinder
     {
@@ -20,7 +42,8 @@ Function FileFinder
     (
         [Parameter(Mandatory=$true)]
         [array] $dirList,
-        [array] $extList="dll"
+        [Parameter(Mandatory=$false)]
+        [array] $extList = @("dll")
     )
 
     # Create a list of discovered files
@@ -78,4 +101,3 @@ Function FileFinder
 
 
 FileFinder
-
