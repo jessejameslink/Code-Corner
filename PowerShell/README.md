@@ -26,11 +26,11 @@ USAGE:
 DLL Hardcoded into parameters
 Takes multiple Directory Inputs
 
-# File_Hunt7 
+### File_Hunt7 
 Brian's File Finder
 
-# File_Hunt8
+### File_Hunt8
 Eric's File Finder
 
-# File_Hunt9
+### File_Hunt9
 Instructor's File Finder
