@@ -33,4 +33,4 @@ Brian's File Finder
 Eric's File Finder
 
 ### File_Hunt9
-Instructor's File Finder
+Hybrid File Finder, similar to Hunt4(Jake) and Hunt5(Kory) scripts
