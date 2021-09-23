@@ -1,22 +1,36 @@
-# File Finder 1
+### File_Hunt
+Old File Hunting Script from DCI that read IOC's from a file and searches a host for the files
 
-# File Finder 2
+### File_Hunt2
 Jake's File Finder
+Simple
 Only allows one argument
 
-# File Finder 4
+### File_Hunt3
+Kody's File Finder
+Simple
+Only allows one argument
 
-# File Finder 6
+### File_Hunt4
+Kory's MASTER FILE FINDER
+Interactive GUI for finding multiple files
+
+### File_Hunt5
+Jake's File Finder
+Similar to File_Hunt2 but updated
+Only allows one argument
+
+### File_Hunt6
 Jake's File Finder
 USAGE:
 DLL Hardcoded into parameters
+Takes multiple Directory Inputs
 
-
-# File Finder 7 
+# File_Hunt7 
 Brian's File Finder
 
-# File Finder 8
+# File_Hunt8
 Eric's File Finder
 
-# File Finder 9
+# File_Hunt9
 Instructor's File Finder
