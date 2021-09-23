@@ -27,10 +27,10 @@ DLL Hardcoded into parameters
 Takes multiple Directory Inputs
 
 ### File_Hunt7 
-Brian's File Finder
+Eric's File Finder
 
 ### File_Hunt8
-Eric's File Finder
+Instructor's File Finder
 
 ### File_Hunt9
 Hybrid File Finder, similar to Hunt4(Jake) and Hunt5(Kory) scripts
