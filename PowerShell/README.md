@@ -35,7 +35,7 @@ DLL Hardcoded into parameters
 Takes multiple Directory Inputs  
 'OutFile' Prompt requires full path of output file  
 
-### find_file8 (Currently Broken)  
+### find_file8 (Allegedly Works)  
 Instructor's File Finder  
 
 ### find_file9  
