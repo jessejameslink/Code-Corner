@@ -1,0 +1,7 @@
+Set-Location $HOME
+ni fruits.txt
+ni animals.txt
+ni plants.txt
+Set-Content .\animals.txt "cat`r`ndog`r`nbird`r`nfish" 
+Add-Content .\fruits.txt "apple`r`norange`r`npeach`r`ngrape"
+Add-Content .\plants.txt "tree`r`nbush`r`nflower`r`ngrass"
