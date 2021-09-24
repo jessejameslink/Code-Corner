@@ -7,9 +7,7 @@ $hashtable = @{
 $object = [PSCustomObject]$hashtable
 
 <#example usage: 
-
->$object | Select-Object -Property Rank
-
+$object | Select-Object -Property Rank
 Rank
 ----
 WO1 
