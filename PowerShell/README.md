@@ -20,16 +20,21 @@ Jake's File Finder
 Similar to File_Hunt2 but updated
 Only allows one argument
 
-### find_file6
+### find_file6 (BEST)
 Jake's File Finder
 USAGE:
 DLL Hardcoded into parameters
 Takes multiple Directory Inputs
+*Help Section not fully function*
 
 ### find_file7 
 Eric's File Finder
+USAGE:
+DLL Hardcoded into parameters
+Takes multiple Directory Inputs
+'OutFile' Prompt requires full path of output file
 
-### find_file8
+### find_file8 (Currently Broken)
 Instructor's File Finder
 
 ### find_file9
