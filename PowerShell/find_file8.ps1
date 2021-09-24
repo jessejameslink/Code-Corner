@@ -12,21 +12,27 @@ A list of Extensions to search for
 #>
 param(
     [Parameter(mandatory = $True)][array]$directories,
-    [array]$exts="dll"
-)
+    [array]$exts="dll",
+    [string]$outfile="$HOME\Desktop"
+    )
 foreach ($directory in $directories) {
     foreach ($ext in $exts) {
        Get-ChildItem -Path $directory "*.$ext" | select-object -property Fullname, CreationTime, LastAccessTime | ForEach-Object { 
-            $cert= Get-AuthenticodeSignature $_.FullName
+            $fname = $_.fullname
+            $ctime= $_.CreationTime
+            $latime = $_.LastAccessTime
             $hash = (Get-FileHash -algo $_.FullName).hash
             $hash
            if ($cert.status -eq "valid") {
-               (((($cert.signercertificate).IssuerName).Name).Split(",")).Split("=")
+               $issuer = (((($cert.signercertificate).IssuerName).Name).Split(",")).Split("=")[3]
+               $line = "$ctime`t$issuer`t$hash`t$fname"
+               out-file -Filepath "$outfile\valid.txt" -InputObject $line -Append
             }
             else {
-                $info = "$_.FullName $_.creation $_.lastaccesstime $hash"
+                $line = "$ctime`t$latime`t$hash`t$fname"
+                $line | tee-object -Filepath "$outfile\invalid.txt" -Append 
                 $info
             }   
         }    
     }
-}    
+} 
