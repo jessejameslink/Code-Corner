@@ -24,7 +24,8 @@ Only allows one argument
 Jake's File Finder  
 USAGE:  
 DLL Hardcoded into parameters  
-Takes multiple Directory Inputs  
+Allows Multiple Directory Inputs
+Allows Multiple Extention Inputs
 *Help Section not fully function*  
 
 ### find_file7  
