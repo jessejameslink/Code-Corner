@@ -1,0 +1,29 @@
+century2 password=10.0.14393.3866  $PSVersiontable
+century3 password=invoke-webrequest443
+century4 password=123  get-childitem | measure-object
+century5 password=61580 get-content
+century6 password=underthewire3347 $env=USERDOMAIN
+century7 password= 197   get-childitem | measure-object
+century8 password= 7points     get-childitem -Path C:\users\century7\ -Recurse -force -erroraction silentlycontinue | select-string "readme"
+century9 password = 696     
+$A = $( foreach ($line in Get-Content C:\Test1\File1.txt) {
+    $line.tolower().split(" ")
+  }) | Sort-Object | Get-Unique
+$A.count
+century10 password= patinas
+$string=(Get-content .\Word_file.txt)
+$wordindex=161
+($string -split "\s+")[($wordIndex +1)]
+
+scandaliser / pierid
+
+century11 password=windowsupdates110 
+get-wmiobject win32_service | where-object {$_.Name -eq 'wuauser
+v'} | format-list Name, Description 
+
+(get-wmiobject win32_service | where-object {$_.Name -eq 'wuauserv'} | select -expandproperty Description).split[7..9];gci
+
+century12 password=secret_sauce
+get-childitem -path c:\users\century10\ -recurse 
+
+century13 password

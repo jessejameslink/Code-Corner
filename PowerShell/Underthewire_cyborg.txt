@@ -1,0 +1,6 @@
+
+
+set-location AD:
+get-childitem
+set-location ".\DC=underthewire,DC=tech"
+set-location "cn=users"
