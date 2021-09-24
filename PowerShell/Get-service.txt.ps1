@@ -1,0 +1,1 @@
+﻿get-service | where {$_.status -eq 'Running'} | Out-file -FilePath .\Running_processes.txt

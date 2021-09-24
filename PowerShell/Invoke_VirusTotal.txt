@@ -1,0 +1,8 @@
+$checksum = "4988e05aaae2fa035b8199295be7d4cf5527e4cb"            
+$res = (Invoke-WebRequest -Uri 'https://www.virustotal.com/search/' -Method Post -Body "query=$checksum")                        
+$page = Invoke-WebRequest -Method GET -Uri $res.BaseResponse.ResponseUri.OriginalString                        
+$obj = New-Object -TypeName PSObject                        
+    ($page.AllElements | ? { ($_.TagName -eq 'TBODY') -and ($_.outerHTML -match "$checksum") }).OuterText -split "`n" |  % {                        
+    $obj | Add-Member -MemberType NoteProperty -Name ($_ -split ":")[0] -Value (-join($_ -split ":" )[1..($_ -split ":" ).count])                        
+}                        
+$obj
