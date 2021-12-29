@@ -8,7 +8,6 @@
 # DEPENDENCIES include Nmap: https://nmap.org/
 
 
-
 import os
 
 def main():
