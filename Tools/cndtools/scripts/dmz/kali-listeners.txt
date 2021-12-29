@@ -1,0 +1,29 @@
+kali01 - windows/beacon_dns/reverse_dns_txt
+host: push.ad-tracker.org
+port: 53
+beacons: push.adobe-research.net,push.analytics-response.info,push.avprotect.net,push.cloud-onedrive.net,push.dns-response.net,push.dnsportal.org,push.doubleclickad.net,push.edge-akadns.net,push.edge-akamai.net,push.idnslookup.net,push.loadbalance-akadns.net,push.loadbalance-akamai.net,push.msexplorer.net,push.trafficmannager.net
+
+kali02 - windows/beacon_https/reverse_https
+host: clients.idnslookup.net
+port: 515
+beacons: clients.ad-tracker.org,clients.adobe-research.net,clients.analytics-response.info,clients.avprotect.net,clients.cloud-onedrive.net,clients.dns-response.net,clients.dnsportal.org,clients.doubleclickad.net,clients.edge-akadns.net,clients.edge-akamai.net,clients.idnslookup.net,clients.loadbalance-akadns.net,clients.loadbalance-akamai.net,clients.msexplorer.net,clients.trafficmannager.net
+
+kali03 - windows/beacon_dns/reverse_dns_txt
+host: activity.ad-tracker.org
+port: 53
+beacons: activity.ad-tracker.org,activity.adobe-research.net,activity.analytics-response.info,activity.avprotect.net,activity.cloud-onedrive.net,activity.dns-response.net,activity.dnsportal.org,activity.doubleclickad.net,activity.edge-akadns.net,activity.edge-akamai.net,activity.idnslookup.net,activity.loadbalance-akadns.net,activity.loadbalance-akamai.net,activity.msexplorer.net,activity.trafficmannager.net
+
+kali04 - windows/beacon_https/reverse_https
+host: sposvc.ad-tracker.org
+port: 515
+beacons: sposvc.ad-tracker.org,sposvc.adobe-research.net,sposvc.analytics-response.info,sposvc.avprotect.net,sposvc.cloud-onedrive.net,sposvc.dns-response.net,sposvc.dnsportal.org,sposvc.doubleclickad.net,sposvc.edge-akadns.net,sposvc.edge-akamai.net,sposvc.idnslookup.net,sposvc.loadbalance-akadns.net,sposvc.loadbalance-akamai.net,sposvc.msexplorer.net,sposvc.trafficmannager.net
+
+kali05 - windows/beacon_dns/reverse_dns_txt
+host: delivery.ad-tracker.org
+port: 53
+beacons: delivery.ad-tracker.org,delivery.dns-response.net,delivery.idnslookup.net,delivery.avprotect.net,delivery.dnsportal.org,delivery.msexplorer.net,delivery.cloud-onedrive.net,delivery.doubleclickad.net,delivery.analytics-response.info,delivery.edge-akadns.net,delivery.edge-akamai.net,delivery.loadbalance-akadns.net,delivery.loadbalance-akamai.net
+
+kali06 - windows/beacon_https/reverse_https
+host: cdn.idnslookup.net
+port: 515
+beacons: cdn.adobe-research.net,cdn.ad-tracker.org,cdn.dns-response.net,cdn.avprotect.net,cdn.dnsportal.org

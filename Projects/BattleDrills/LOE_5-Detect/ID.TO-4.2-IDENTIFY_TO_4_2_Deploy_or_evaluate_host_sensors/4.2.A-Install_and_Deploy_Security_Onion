@@ -1,0 +1,76 @@
+## Task
+ID.TO-4.2.A – Install and Deploy Security Onion 
+  
+## Conditions 
+Install and Deploy Security Onion 
+  
+## Standards 
+1. Team member identifies machine for Security Onion operating system 
+2. Use manual steps provided below to follow prompts 
+  
+## End State 
+Security Onion is configured and ready for sensor node deployment. 
+  
+## Manual Steps 
+Security Onion Installation  
+Security Onion welcome window > Press enter to select YES  
+Select install – Run the standard Security Onion Installation  
+Select option 2 STANDALONE using space bar to select, press tab, then press enter to select OK  
+Spacebar to select AIRGAP, press tab, then enter to select OK  
+Type “AGREE”, press tab, then enter to select “OK” (if applicable)  
+"This machine has 1 NIC, but needs 2...” press enter to select YES (If applicable)  
+“This machine has 2 cores, but needs 4...” press enter to select YES (If applicable)  
+“This machine has 2 GB Memory, but needs 12GB...” press enter to select YES (If applicable)  
+Type host name (ex: Team03-SO02), press tab, then press enter to select YES  
+“Please select your management NIC” Select ens192 NIC with spacebar, press tab, then press enter to select OK  
+Management Interface setup: Select STATIC, press tab, then enter to select OK  
+Enter IPV4 subnet IP for Security Onion Server (Ex: 55.3.1.241/24), tab --> enter  
+Enter gateway’s IPV4 address (Ex:55.3.1.1) tab --> enter  
+Enter DNS server separated by commas (Ex:51.3.1.201 DC Server IP) tab --> enter  
+Enter DNS search domain (Ex: team03.tgt) tab --> enter  
+  
+“Initialize Networking” enter to select OK  
+NICS Monitor Interface: Select all NICS using spacebar tab --> enter  
+OS Patch schedule: Select MANUAL  
+“Home Networks” Enter workstations subnet (Ex: 51.3.0.0/16) tab --> enter  
+“Which type of manager” Select BASIC with spacebar, tab --> enter  
+Tool for Metadata: Select ZEEK  
+IDS Ruleset: Spacebar select ETOPEN, tab --> enter  
+Services that enable use RAM: Acknowledge with OK  
+Select Components to install: Select WAZUH only with spacebar, tab --> enter  
+Default Docker IP Range: Enter YES  
+Enter email address: soadmin@team03.tgt  
+Enter a Password: BlueAdmin123!@  
+Re-enter password  
+How to access web interface: Select IP only with spacebar, tab --> enter  
+How to download OS package updates: Select MANAGER  
+Acknowledge prompt to set a password for soremote user  
+Enter a Password: BlueAdmin123!@  
+Re-enter password  
+  
+Want to inherit Home_net from the manager?: Select YES  
+Type of configuration: Select BASIC with spacebar, tab --> enter  
+Zeek processes: Leave default “1”  
+Suricata processes: Leave default “1”  
+Type of config: Select Nodebasic with spacebar, tab --> enter  
+Run so-allow to allow access to web tools: Select YES  
+Enter a single IP address or IP range: (Ex: 55.3.0.0/16)  
+Machine as STANDALONE: YES  
+Allow configuration settings to install (if applicable)  
+  
+## Running Script 
+N/A 
+  
+## Dependencies 
+1. Host machine,  
+2. Operating System, Security Onion 
+  
+## Other available tools 
+N/A 
+  
+## References 
+1. https://securityonionsolutions.com/software 
+2. https://docs.securityonion.net/en/2.3/installation.html 
+  
+## Revision History 
+09 APR 2021 

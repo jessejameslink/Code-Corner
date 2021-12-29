@@ -1,0 +1,35 @@
+Overview:
+nmaptocsv.py is a simple python script that takes a Grepable or Native NMAP formatted output and converts it to a csv file for consumption by other tools
+
+Authors / Contributors: 
+pr4jwal, maaaaz
+
+Usage:
+python nmaptocsv.py -i {nmapscan.nmap} -f ip-port-os-service-version -o /root/working/internal/nmap/{entity}-nmap-summary.csv
+
+Options:
+
+-i Nmap scan output file for parsing
+-o csv file to output results (e.g. path/results.csv)
+-f Columns to output:  (default : ip-fqdn-port-protocol-service-version)
+   options:  fqdn
+             hop_number
+             ip
+             mac_address
+             mac_vendor
+             port
+             protocol
+             os
+             service
+             version
+-n Insert a newline between each host for better readability
+-s Supress Header of csv file
+
+
+Sample Output:
+
+165.235.69.24;80;Windows;http-proxy;syn-ack ttl 48  Microsoft ISA Server http proxy
+165.235.69.24;443;Windows;ssl/http;syn-ack ttl 109 Microsoft IIS httpd
+165.235.69.24;8008;Windows;http;syn-ack ttl 46
+165.235.69.25;21;Windows;ftp;syn-ack ttl 48 Serv-U ftpd 15.1
+165.235.69.25;80;Windows;http?;syn-ack ttl 48

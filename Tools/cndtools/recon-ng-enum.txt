@@ -1,0 +1,127 @@
+# 
+set THREADS 40
+set TIMEOUT 50
+#change workspace name
+workspaces add saccounty.net
+workspaces select saccounty.net
+#change domain name
+add domains saccounty.net
+
+# load recon/domains-domains/brute_suffix
+# run
+load recon/domains-hosts/bing_domain_web
+run
+load recon/domains-hosts/brute_hosts
+run
+load recon/domains-hosts/builtwith
+run
+load recon/domains-hosts/google_site_web
+run
+load recon/domains-hosts/hackertarget
+run
+load recon/domains-hosts/netcraft
+run
+load recon/domains-hosts/shodan_hostname
+run
+load recon/domains-hosts/ssl_san
+run
+load recon/domains-hosts/vpnhunter
+run
+load recon/hosts-hosts/bing_ip
+run
+load recon/hosts-hosts/freegeoip
+run
+load recon/hosts-hosts/ipinfodb
+run
+load recon/hosts-hosts/resolve
+run
+load recon/hosts-hosts/reverse_resolve
+run
+load recon/hosts-hosts/ssltools
+run
+load recon/hosts-locations/migrate_hosts
+run
+load recon/hosts-ports/shodan_ip
+run
+load recon/netblocks-companies/whois_orgs
+run
+load recon/netblocks-hosts/reverse_resolve
+run
+load recon/netblocks-hosts/shodan_net
+run
+load recon/netblocks-ports/census_2012
+run
+load recon/netblocks-ports/censysio
+run
+load recon/locations-locations/geocode
+run
+load recon/locations-locations/reverse_geocode
+run
+load recon/companies-contacts/bing_linkedin_cache
+run
+load recon/companies-contacts/indeed
+run
+load recon/companies-contacts/linkedin_auth
+run
+load recon/companies-multi/github_miner
+run
+load recon/companies-multi/whois_miner
+run
+load recon/domains-contacts/pgp_search
+run
+load recon/domains-contacts/whois_pocs
+run
+load recon/domains-credentials/pwnedlist/account_creds
+run
+load recon/domains-vulnerabilities/punkspider
+run
+load recon/domains-vulnerabilities/xssed
+run
+load recon/domains-vulnerabilities/xssposed
+run
+load recon/contacts-contacts/mailtester
+run
+# use after analysis recon/contacts-contacts/mangle
+load recon/contacts-contacts/unmangle
+run
+load recon/contacts-credentials/hibp_breach
+run
+load recon/contacts-credentials/hibp_paste
+run 
+# recon/contacts-domains/migrate_contacts
+load recon/contacts-profiles/fullcontact
+run
+load recon/profiles-repositories/github_repos
+run
+load recon/repositories-profiles/github_commits
+run
+load recon/repositories-vulnerabilities/gists_search
+run
+load recon/repositories-vulnerabilities/github_dorks
+run
+load recon/credentials-credentials/adobe
+run
+# recon/credentials-credentials/bozocrack
+# recon/credentials-credentials/hashes_org
+# recon/domains-contacts/metacrawler
+# need api key recon/locations-pushpins/flickr
+# need appi key recon/locations-pushpins/instagram
+load recon/locations-pushpins/picasa
+run
+load recon/locations-pushpins/shodan
+run
+# need to add account recon/locations-pushpins/twitter
+load recon/locations-pushpins/youtube
+run
+# need to check recon/ports-hosts/migrate_ports
+load recon/profiles-contacts/dev_diver
+run
+load recon/profiles-contacts/github_users
+run
+load recon/profiles-profiles/namechk
+run
+load recon/profiles-profiles/profiler
+run
+load recon/profiles-profiles/twitter
+run
+# Check manually: recon/domains-vulnerabilities/ghdb
